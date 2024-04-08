@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./style/bootstrap.css">
+    <!-- style -->
+    <link rel="stylesheet" href="./style/index.css">
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>title</title>
+</head>
+
+<body>
+    <div id="app" class="text-center">
+        <div class="container">
+            <div class="row p-5">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <button @click="getEmailList" class="btn btn-primary w-100" type="button">
+                            Get Email List
+                        </button>
+                    </li>
+                    <li v-for="email in emailList" class="list-group-item"> {{ email }} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
